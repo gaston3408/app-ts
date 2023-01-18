@@ -9,10 +9,14 @@ class ProductRequestFilter implements IFilter {
         this.request = request;
     }
 
+    getValue(key: string): string {
+        return this.request.query[key] as string ?? null;
+    }
+
     getSize(): number {
         return this.request.query?.size ? parseInt(this.request.query.size as string, 10) : null;
     }
-    
+
     getPage(): number {
         return this.request.query?.page ? parseInt(this.request.query.page as string, 10) : null;
     }

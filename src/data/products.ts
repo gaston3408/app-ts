@@ -1,16 +1,15 @@
-import IProduct from '../Models/IProduct';
 export default [
     {
         "id": 1,
-        "name": "",
+        "name": "test",
         "image": "",
         "price": 10,
-        "currency": "USD",
+        "currency": "SOL",
         "quantity": 5
     },
     {
         "id": 2,
-        "name": "",
+        "name": "otro",
         "image": "",
         "price": 10,
         "currency": "USD",
@@ -29,7 +28,7 @@ export default [
         "name": "",
         "image": "",
         "price": 10,
-        "currency": "USD",
+        "currency": "PESO",
         "quantity": 5
     },
     {

@@ -12,10 +12,11 @@ class ProductController extends BaseHttpController
 	public async list(req: express.Request, res: express.Response, next: express.NextFunction) 
     {
         const filter = new ProductRequestFilter(req);
-        
+
         const service = new ListProductService();
         const products = await service.list(filter);
         const metadata = getMetadata(filter, products);
+        
         res.status(200).json({metadata, products});
     }
 }

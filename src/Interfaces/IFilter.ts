@@ -1,7 +1,7 @@
 interface IFilter {
     getSize(): number;
     getPage(): number;
-    // TODO: CLASS FILTER AND METHODS.
+    getValue(key: string): string;
 }
 
 export default IFilter;

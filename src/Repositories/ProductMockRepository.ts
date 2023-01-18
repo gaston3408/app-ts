@@ -9,10 +9,30 @@ class ProductMockRepository implements IRepository<IProduct> {
         const page = filter.getPage();
         const size = page ? filter.getSize() * page : filter.getSize();
         const firtSize = size - filter.getSize();
+        const valueCurrency = filter.getValue('currency');
+        const valueName = filter.getValue('query')
+
+        if(valueCurrency)
+        {
+            productFiltered = productFiltered.filter(prod => {
+                if(prod.currency.includes(valueCurrency)){
+                    return prod;
+                }
+            })
+        }
+
+        if(valueName)
+        {
+            productFiltered = productFiltered.filter(prod => {
+                if(prod.name.includes(valueName)){
+                    return prod;
+                }
+            })
+        }
 
         if(size)
         {
-            productFiltered = products.filter((prod, index: number) => {
+            productFiltered = productFiltered.filter((prod, index: number) => {
                 // @ts-ignore
                 if(index < size & index >= firtSize){
                     return prod;
