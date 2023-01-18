@@ -6,5 +6,5 @@ yarn
 ## Run app with
 yarn start
 
-## Tests
+## Run tests with
 yarn test
