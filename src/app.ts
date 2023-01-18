@@ -28,6 +28,11 @@ class App
             console.log(`listening on port ${this.port}`);
         });
     }
+
+    public get()
+    {
+        return this.app;
+    }
 }
 
 export default App;

@@ -4,4 +4,7 @@
 yarn
 
 ## Run app with
-yarn dev
+yarn start
+
+## Tests
+yarn test
