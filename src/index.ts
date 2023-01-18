@@ -5,7 +5,6 @@ void (async() =>
     try
     {
         const app = new App();
-        app.initConfig();
         app.build();
         app.listen();
     }
