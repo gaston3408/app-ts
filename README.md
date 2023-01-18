@@ -1,7 +1,7 @@
 # app-ts
 
-# Install dependencies with
+## Install dependencies with
 yarn
 
-# Run app with
+## Run app with
 yarn dev
